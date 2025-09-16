@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>flodesk</h1>
+    <p>Welcome back!</p>
+
+    <div class="input-box">
+      <input type="email" placeholder="Enter your email">
+    </div>
+
+    <div class="input-box">
+      <input type="password" id="password" placeholder="Enter your password">
+      <button class="show-btn" type="button" onclick="togglePassword()">Show</button>
+    </div>
+
+    <button class="btn">Log in to Flodesk</button>
+
+    <div class="links">
+      <p>Not a member? <a href="#">Sign up</a></p>
+      <p><a href="#">Forgot your password?</a></p>
+    </div>
+
+    <div class="footer">
+      <p>By continuing, you agree to Flodesk's <a href="#">terms</a> and acknowledge you’ve read our <a href="#">privacy policy</a>.</p>
+    </div>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const passwordField = document.getElementById("password");
+      const showBtn = document.querySelector(".show-btn");
+
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+        showBtn.textContent = "Hide";
+      } else {
+        passwordField.type = "password";
+        showBtn.textContent = "Show";
+      }
+    }
+  </script>
+</body>
+</html>
